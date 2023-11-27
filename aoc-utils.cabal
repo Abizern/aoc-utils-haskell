@@ -59,13 +59,13 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  MyLib
+    exposed-modules:  AOCUtils.Input
 
     -- Modules included in this library but not exported.
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    other-extensions: OverloadedStrings
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.19.0.0
