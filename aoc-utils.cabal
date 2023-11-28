@@ -59,7 +59,10 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  AOCUtils.Input
+    exposed-modules:
+        AOCUtils.Lists
+        AOCUtils.Input
+        AOCUtils.Points
 
     -- Modules included in this library but not exported.
     -- other-modules:
