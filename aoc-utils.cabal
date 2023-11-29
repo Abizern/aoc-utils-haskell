@@ -60,6 +60,7 @@ library
 
     -- Modules exported by the library.
     exposed-modules:
+        AOCUtils.Hash
         AOCUtils.Lists
         AOCUtils.Input
         AOCUtils.Points
@@ -71,7 +72,11 @@ library
     other-extensions: OverloadedStrings
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.19.0.0
+    build-depends:
+         base ^>=4.19.0.0,
+         base16-bytestring,
+         bytestring,
+         cryptohash-md5
 
     -- Directories containing source files.
     hs-source-dirs:   lib
