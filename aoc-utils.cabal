@@ -64,6 +64,7 @@ library
         AOCUtils.Lists
         AOCUtils.Input
         AOCUtils.Points
+        AOCUtils.Strings
 
     -- Modules included in this library but not exported.
     -- other-modules:

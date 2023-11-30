@@ -1,6 +1,11 @@
 -- |
 -- Functions to make working with lists a little easier
-module AOCUtils.Lists (alternate) where
+module AOCUtils.Lists
+  ( alternate,
+    pairs,
+    successiveElems,
+  )
+where
 
 -- |
 -- >>> alternate [1 .. 10]
@@ -15,3 +20,17 @@ alternate' :: [a] -> [a] -> [a] -> ([a], [a])
 alternate' [] a b = (reverse a, reverse b)
 alternate' [_] a b = (reverse a, reverse b)
 alternate' (x : y : xs) a b = alternate' xs (x : a) (y : b)
+
+-- | Turns a list into a tuple of elements separated by n
+-- >>> successiveElems 2 "abcde"
+-- [('a','c'),('b','d'),('c','e')]
+successiveElems :: Int -> [a] -> [(a, a)]
+successiveElems n xs = zip xs $ drop n xs
+
+-- | Turns a list into a tuple of successive elements
+-- >>> pairs "abc"
+-- [('a','b'),('b','c')]
+-- >>> pairs [1, 2, 3]
+-- [(1,2),(2,3)]
+pairs :: [a] -> [(a, a)]
+pairs = successiveElems 1
