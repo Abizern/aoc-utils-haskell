@@ -18,5 +18,6 @@ isVowel c = c `elem` "aeiouAEIOU"
 isConsonant :: Char -> Bool
 isConsonant = not . isVowel
 
+-- | Collect the digits in a string and turn into a number
 extractNumber :: String -> Int
 extractNumber s = read [c | c <- s, isDigit c]
