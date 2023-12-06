@@ -6,6 +6,7 @@ module AOCUtils.Input
   ( getRawInput,
     makeTitle,
     newlines,
+    spacedNumbers,
   )
 where
 
@@ -22,5 +23,12 @@ getRawInput d = readFile (printf "inputs/day%02d.txt" d)
 makeTitle :: String -> String
 makeTitle s = mconcat [s, "\n", replicate (length s) '-', "\n"]
 
+-- | Splits a string on empty lines
 newlines :: String -> [String]
 newlines = splitOn "\n\n"
+
+-- | Splits a line of space delimited numbers into an list of Int
+-- >>> spacedNumbers "  11   12 13"
+-- [11,12,13]
+spacedNumbers :: String -> [Int]
+spacedNumbers = map read . words
