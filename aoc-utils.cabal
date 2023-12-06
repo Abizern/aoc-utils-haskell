@@ -16,6 +16,7 @@ library
     import:           build
     exposed-modules:
         AOCUtils
+        AOCUtils.Grids
         AOCUtils.Hash
         AOCUtils.Input
         AOCUtils.Lists
