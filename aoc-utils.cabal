@@ -15,9 +15,10 @@ common build
 library
     import:           build
     exposed-modules:
+        AOCUtils
         AOCUtils.Hash
-        AOCUtils.Lists
         AOCUtils.Input
+        AOCUtils.Lists
         AOCUtils.Points
         AOCUtils.Strings
     other-extensions: OverloadedStrings
