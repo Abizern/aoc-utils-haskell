@@ -3,6 +3,7 @@
 module AOCUtils.Lists
   ( alternate,
     pairs,
+    replace,
     successiveElems,
   )
 where
@@ -34,3 +35,9 @@ successiveElems n xs = zip xs $ drop n xs
 -- [(1,2),(2,3)]
 pairs :: [a] -> [(a, a)]
 pairs = successiveElems 1
+
+-- | Replace items
+-- >>> replace 'o' 'X' "Hello World!"
+-- "HellX WXrld!"
+replace :: (Eq a) => a -> a -> [a] -> [a]
+replace a b = map $ \c -> if c == a then b else c
