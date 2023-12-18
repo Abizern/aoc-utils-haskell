@@ -28,7 +28,6 @@ library
                   base ^>=4.19.0.0,
                   base16-bytestring,
                   bytestring,
-                  containers >=0.6.8 || >= 0.7,
                   cryptohash-md5,
                   split >= 0.2.4
 
